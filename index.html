@@ -361,64 +361,73 @@
   </div>
 </footer>
 
-<!-- MODAL WINDOW -->
 <div class="backdrop">
-  <div class="modal">
-    <button type="button" class="modal-close">
-      <svg width="18" height="18">
+  <div class="modal-window">
+    <button type="button" class="modal-close-btn">
+      <svg class="modal-close-icon" width="8" height="8">
         <use href="./images/icons.svg#icon-close"></use>
       </svg>
     </button>
 
-    <form class="modal-form">
-      <p class="form-title">Leave your contacts and we will call you back</p>
+    <p class="modal-title">Leave your contacts and we will call you back</p>
 
-      <label class="form-field">
-        <span class="form-label">Name</span>
-        <span class="input-wrapper">
-          <input type="text" name="name" placeholder="Your name" />
-          <svg class="input-icon" width="18" height="18">
+    <form class="modal-form">
+      <!-- NAME -->
+      <div class="input-field">
+        <label class="input-label" for="user-name">Name</label>
+        <div class="input-wrap">
+          <input class="input-control" id="user-name" name="user-name" type="text" />
+          <svg class="input-icon" width="18" height="24">
             <use href="./images/icons.svg#icon-person"></use>
           </svg>
-        </span>
-      </label>
+        </div>
+      </div>
 
-      <label class="form-field">
-        <span class="form-label">Phone</span>
-        <span class="input-wrapper">
-          <input type="tel" name="phone" placeholder="+380..." />
-          <svg class="input-icon" width="18" height="18">
+      <!-- PHONE -->
+      <div class="input-field">
+        <label class="input-label" for="user-phone">Phone</label>
+        <div class="input-wrap">
+          <input class="input-control" id="user-phone" name="user-phone" type="tel" />
+          <svg class="input-icon" width="18" height="24">
             <use href="./images/icons.svg#icon-phone"></use>
           </svg>
-        </span>
-      </label>
+        </div>
+      </div>
 
-      <label class="form-field">
-        <span class="form-label">Email</span>
-        <span class="input-wrapper">
-          <input type="email" name="email" placeholder="example@gmail.com" />
-          <svg class="input-icon" width="18" height="18">
+      <!-- EMAIL -->
+      <div class="input-field">
+        <label class="input-label" for="user-email">Email</label>
+        <div class="input-wrap">
+          <input class="input-control" id="user-email" name="user-email" type="email" />
+          <svg class="input-icon" width="18" height="24">
             <use href="./images/icons.svg#icon-email"></use>
           </svg>
-        </span>
-      </label>
+        </div>
+      </div>
 
-      <label class="form-field">
-        <span class="form-label">Comment</span>
-        <textarea name="comment" placeholder="Enter text"></textarea>
-      </label>
+      <!-- COMMENT -->
+      <div class="comment-field">
+        <label class="input-label" for="user-comment">Comment</label>
+        <textarea class="comment-control" id="user-comment" name="user-comment" placeholder="Text input"></textarea>
+      </div>
 
-      <label class="checkbox-field">
-        <input type="checkbox" name="policy" class="checkbox-original" />
-        <span class="checkbox-custom">
-          <svg width="16" height="16">
-            <use href="./images/icons.svg#icon-check"></use>
-          </svg>
-        </span>
-        I agree with the Privacy Policy
-      </label>
+      <!-- PRIVACY -->
+      <div class="checkbox-field">
+        <input class="checkbox-original visually-hidden" id="user-privacy" type="checkbox" name="user-privacy"
+          value="true" />
+        <label class="checkbox-label" for="user-privacy">
+          <span class="checkbox-custom">
+            <svg class="checkbox-icon" width="10" height="8">
+              <use href="./images/icons.svg#icon-check"></use>
+            </svg>
+          </span>
+          I accept the terms and conditions of the
+          <a class="privacy-link" href="#">Privacy Policy</a>
+        </label>
+      </div>
 
-      <button type="submit" class="form-submit">Send</button>
+      <!-- SUBMIT -->
+      <button type="submit" class="modal-submit-btn">Send</button>
     </form>
   </div>
 </div>
